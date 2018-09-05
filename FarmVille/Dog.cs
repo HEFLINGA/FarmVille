@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FarmVille
+namespace FarmVilleStep4
 {
     // Dog class
     class Dog
@@ -18,44 +18,49 @@ namespace FarmVille
             this.name = name;
         }
 
-        // Method for getting a dog to speak!
-        public string Speak()
+        // Method for getting a Dog to speak!
+        public string Speak(string name)
         {
-            var speak = "The Dog Barks";
+            var speak = $"You hear the Dog {name} Barking!";
 
             return speak;
         }
 
-        // Method for getting a dog to sleep!
-        public string Sleep()
+        public void DogMenu(string dog1, string dog2, string dog3, string dog4)
         {
-            var sleep = "The dog is asleep!";
+            var dogInput = "";
 
-            return sleep;
-        }
+            Console.WriteLine("You see the dogs!! Press Enter to continue");
+            Console.ReadLine();
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("What would you like to do at the here with the dogs?");
+                Console.WriteLine("1. Listen to the sound a dog makes?");
+                Console.WriteLine("2. See what kind of Service a dog does?");
+                Console.WriteLine("3. See what a dog eats?");
+                Console.WriteLine("4. Play with your dog??");
+                Console.WriteLine("'exit' To exit to Main Menu");
+                dogInput = Console.ReadLine().ToLower();
 
-        // Method for getting a dog to do there Service! Which is Hearding animals
-        public string Service(string name)
-        {
-            var heard = $"And off {name} went! Hearding Animals! Thats what dogs do around here generally.";
+                if (dogInput != "exit")
+                {
+                    switch (dogInput)
+                    {
+                        case "1":
+                            Console.WriteLine($"{new Dog().Speak(dog1)}");
+                            Console.ReadLine();
+                            break;
+                        case "2":
+                            throw new NotImplementedException("No Dog Service Method built yet");
+                        case "3":
+                            throw new NotImplementedException("No Dog Eating Method built yet");
+                        case "4":
+                            throw new NotImplementedException("No Dog Playing Method built yet");
+                    }
+                }
 
-            return heard;
-        }
-
-        // Method for getting a dog to Play!
-        public string Play(string name)
-        {
-            var play = $"Ahhh, {name} wants to play!!";
-
-            return play;
-        }
-
-        // Method for getting a dog to Eat!
-        public string Eat(string name)
-        {
-            var eat = $"{name} is eating some food!";
-
-            return eat;
+            } while (dogInput != "exit");
         }
     }
 }

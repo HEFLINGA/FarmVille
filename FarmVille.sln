@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmVille", "FarmVille\FarmVille.csproj", "{AE81EBDB-3450-4E64-B79A-72D6073D7322}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FarmVille(Step4FinishedProduct)", "FarmVille\FarmVille(Step4FinishedProduct).csproj", "{AE81EBDB-3450-4E64-B79A-72D6073D7322}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Step1Exercise5A", "Step1Exercise5A\Step1Exercise5A.csproj", "{BE6132CC-59E7-42C7-B1AC-5A5AF42B1782}"
 EndProject

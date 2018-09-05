@@ -49,6 +49,7 @@
     <Compile Include="Horse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sheep.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

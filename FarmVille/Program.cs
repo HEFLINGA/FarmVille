@@ -4,63 +4,92 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FarmVille
+namespace FarmVilleStep4
 {
     class Program
     {
         static void Main(string[] args)
         {
             // Animals in farm - Horses, Cows, Dogs, Chickens, Sheep
-            // Methods for Horses   - Speak(), Sleep(), Eat(), Drink(), Service()       - Done!
-            // Methods for Cows     - Speak(), Sleep(), Eat(), Drink(), Service()       - Done!
-            // Methods for Dogs     - Speak(), Sleep(), Eat(), Service(), Play()        - Done!
-            // Methods for Chickens - Speak(), Sleep(), Eat(), Service(),               - 
-            // Methods for Sheep    - Service()                                         - 
+            // Methods for Horses   - Speak(), Eat(), Drink(), Service()       -
+            // Methods for Cows     - Speak(), Eat(), Drink(), Service()       -
+            // Methods for Dogs     - Speak(), Eat(), Service(), Play()        -
+            // Methods for Chickens - Speak(), Eat(), Service(), Food()        - 
+            // Methods for Sheep    - Speak(), Eat(), Service(), Play()        - 
 
-            // Variables for names
-            var characterName = "";
-
-            #region Startup
-            Console.WriteLine("Hello there! What's your name friend?");
-            characterName = Console.ReadLine();
-            Console.WriteLine($"Welcome to FarmVille {characterName}, I heard someone new was going to be taking over the place.. Guess that's you!");
-            Console.WriteLine("Press 'enter' to continue: ");
-            Console.ReadLine();
-            #endregion
-
-            // Instantiating Animals
-            // Instantiating Dogs - 
-            Dog dog1 = new Dog("Ruby");
-            Dog dog2 = new Dog("Bandit");
-            Dog dog3 = new Dog("Sugar");
-
-            // Instantiating Horses - 
+            // Instantiating Horses
             Horse horse1 = new Horse("Lightning");
-            Horse horse2 = new Horse("MrEd");
-            Horse horse3 = new Horse("Butch");
+            Horse horse2 = new Horse("Hurby");
+            Horse horse3 = new Horse("Zippy");
+            Horse horse4 = new Horse("Pearl");
 
-            // Instantiating Cows - 
-            Cow cow1 = new Cow("Birtha");
-            Cow cow2 = new Cow("Richard");
+            // Instantiating Cows
+            Cow cow1 = new Cow("Rob");
+            Cow cow2 = new Cow("Birtha");
+            Cow cow3 = new Cow("Daisy");
+            Cow cow4 = new Cow("Cher");
 
-            // Instantiating Chickens - 
+            // Instantiating Dogs
+            Dog dog1 = new Dog("Bandit");
+            Dog dog2 = new Dog("Genny");
+            Dog dog3 = new Dog("Ruby");
+            Dog dog4 = new Dog("Franks");
 
+            // Instantiating Chickens
+            Chicken chicken1 = new Chicken("Cluckyy");
+            Chicken chicken2 = new Chicken("Chicken Little");
+            Chicken chicken3 = new Chicken("Sall");
+            Chicken chicken4 = new Chicken("Rickky");
 
-            // Instantiating Sheep - 
+            // Instantiating Sheep
+            Sheep sheep1 = new Sheep("Fran");
+            Sheep sheep2 = new Sheep("bill");
+            Sheep sheep3 = new Sheep("Hercules");
+            Sheep sheep4 = new Sheep("Paracleas");
 
+            var input = "";
 
-            
-            
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("What would you like to do?");
+                Console.WriteLine("1. Go to the Horse corral");
+                Console.WriteLine("2. Go to the field where the Cows are");
+                Console.WriteLine("3. Go visit your Dogs");
+                Console.WriteLine("4. Go to the Chicken coop");
+                Console.WriteLine("5. Go to your Sheep barn");
+                input = Console.ReadLine().ToLower();
+                if (input != "exit")
+                {
+                    switch (input)
+                    {
+                        case "1":
+                            new Horse().HorseMenu(horse1.name, horse2.name, horse3.name, horse4.name);
+                            Console.WriteLine("Press 'enter' to continue");
+                            break;
+                        case "2":
+                            new Cow().CowMenu(cow1.name, cow2.name, cow3.name, cow4.name);
+                            Console.WriteLine("Press 'enter' to continue");
+                            break;
+                        case "3":
+                            new Dog().DogMenu(dog1.name, dog2.name, dog3.name, dog4.name);
+                            Console.WriteLine("Press 'enter' to continue");
+                            break;
+                        case "4":
+                            new Chicken().ChickenMenu(chicken1.name, chicken2.name, chicken3.name, chicken4.name);
+                            Console.WriteLine("Press 'enter' to continue");
+                            break;
+                        case "5":
+                            new Sheep().SheepMenu(sheep1.name, sheep2.name, sheep3.name, sheep4.name);
+                            Console.WriteLine("Press 'enter' to continue");
+                            break;
+                        default:
+                            Console.WriteLine("Please input a number between 1 and 5, or 'exit' to exit the program: ");
+                            break;
+                    }
+                }
 
-
-            Console.WriteLine($"I hear {dog1.name} and {dog2.name} {dog1.Speak()}ing up a storm! Those are the other 2 dogs we have here at the farm. They are excited to meet you I think. Press 'enter' to continue: ");
-            Console.ReadLine();
-            Console.Clear();
-
-            Console.WriteLine($"Oh! {dog1.Service(dog1.name)}.");
-            Console.WriteLine($"{dog2.Play(dog2.name)} To bad we have some work we gotta get to!");
-
-
+            } while (input != "exit");
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FarmVille
+namespace FarmVilleStep4
 {
     // Cow Class
     class Cow
@@ -19,43 +19,48 @@ namespace FarmVille
         }
 
         // Method for getting a Cow to speak!
-        public string Speak()
+        public string Speak(string name)
         {
-            var speak = "You hear the Cow Mooing from its field";
+            var speak = $"You hear the Cow {name} Mooing from the field";
 
             return speak;
         }
 
-        // Method for getting a Cow to sleep!
-        public string Sleep()
+        public void CowMenu(string cow1, string cow2, string cow3, string cow4)
         {
-            var sleep = "The Cow is asleep in its field!";
+            var cowInput = "";
 
-            return sleep;
-        }
+            Console.WriteLine("You arrived at the Cow field! Press Enter to continue");
+            Console.ReadLine();
+            do
+            {
+                Console.Clear();
+                Console.WriteLine("What would you like to do at the Cow field?");
+                Console.WriteLine("1. Listen to the sound a Cow makes?");
+                Console.WriteLine("2. See what kind of Service a Cow does?");
+                Console.WriteLine("3. See what a Cow eats?");
+                Console.WriteLine("4. Have the Cow drink some water?");
+                Console.WriteLine("'exit' To exit to Main Menu");
+                cowInput = Console.ReadLine().ToLower();
 
-        // Method for getting a Cow to do there Service! Which is to produce Milk
-        public string Service(string name)
-        {
-            var produceMilk = $"You walk up to {name} to see if you can get some milk out of her today. That's generally what cows are for around here.";
+                if (cowInput != "exit")
+                {
+                    switch (cowInput)
+                    {
+                        case "1":
+                            Console.WriteLine($"{new Cow().Speak(cow1)}");
+                            Console.ReadLine();
+                            break;
+                        case "2":
+                            throw new NotImplementedException("No Cow Service Method built yet");
+                        case "3":
+                            throw new NotImplementedException("No Cow Eating Method built yet");
+                        case "4":
+                            throw new NotImplementedException("No Cow Drinking Method built yet");
+                    }
+                }
 
-            return produceMilk;
-        }
-
-        // Method for getting a Cow to eat!
-        public string Eat(string name)
-        {
-            var eat = $"{name} is eating. {name} eats grass and hay!";
-
-            return eat;
-        }
-
-        // Method for getting a Cow to drink!
-        public string Drink(string name)
-        {
-            var drink = $"{name} is drinking some water from its trough!";
-
-            return drink;
+            } while (cowInput != "exit");
         }
     }
 }
