@@ -21,11 +21,35 @@ namespace FarmVilleStep4
         }
 
         // Method for getting a Dog to speak!
-        public string Speak(string name)
+        private string Speak(string name)
         {
-            var speak = $"You hear the Dog {name} Barking!";
+            var speak = $"You hear {name} Barking. Press Enter to continue";
 
             return speak;
+        }
+
+        // Method for getting a Dog Service!
+        private string Service(string name)
+        {
+            var service = $"{name} is a Hearding dog!! They help you with all the other animals. Press Enter to continue";
+
+            return service;
+        }
+
+        // Method for getting what a Dog eats!
+        private string Eat(string name)
+        {
+            var eat = $"Your Dogs eat Dog food.. and {name} steals food off the counter.. Press Enter to continue";
+
+            return eat;
+        }
+
+        // Method for Playing with your Dogs
+        private string Play(string name)
+        {
+            var play = $"{name} Would love to play!! They are so excited! Press Enter to continue";
+
+            return play;
         }
 
         public void DogMenu(string dog1, string dog2, string dog3, string dog4)
@@ -54,11 +78,17 @@ namespace FarmVilleStep4
                             Console.ReadLine();
                             break;
                         case "2":
-                            throw new NotImplementedException("No Dog Service Method built yet");
+                            Console.WriteLine($"{new Dog().Service(dog2)}");
+                            Console.ReadLine();
+                            break;
                         case "3":
-                            throw new NotImplementedException("No Dog Eating Method built yet");
+                            Console.WriteLine($"{new Dog().Eat(dog3)}");
+                            Console.ReadLine();
+                            break;
                         case "4":
-                            throw new NotImplementedException("No Dog Playing Method built yet");
+                            Console.WriteLine($"{new Dog().Play(dog4)}");
+                            Console.ReadLine();
+                            break;
                     }
                 }
 

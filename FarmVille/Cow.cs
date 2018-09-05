@@ -21,11 +21,35 @@ namespace FarmVilleStep4
         }
 
         // Method for getting a Cow to speak!
-        public string Speak(string name)
+        private string Speak(string name)
         {
-            var speak = $"You hear the Cow {name} Mooing from the field";
+            var speak = $"You hear {name} Mooing from there field. Press Enter to continue";
 
             return speak;
+        }
+
+        // Method for getting a Cow Service!
+        private string Service(string name)
+        {
+            var service = $"{name} is a milk producing cow!! Cows produce milk for you to sell/drink. Press Enter to continue";
+
+            return service;
+        }
+
+        // Method for getting what a Cow eats!
+        private string Eat(string name)
+        {
+            var eat = $"Your Cows eat Grass and Hay!! {name} eats waayyyyy to much of it.. Press Enter to continue";
+
+            return eat;
+        }
+
+        // Method for Cow water
+        private string Drink(string name)
+        {
+            var drink = $"{name} is drinking some water at the little pond! Press Enter to continue";
+
+            return drink;
         }
 
         public void CowMenu(string cow1, string cow2, string cow3, string cow4)
@@ -54,11 +78,17 @@ namespace FarmVilleStep4
                             Console.ReadLine();
                             break;
                         case "2":
-                            throw new NotImplementedException("No Cow Service Method built yet");
+                            Console.WriteLine($"{new Cow().Service(cow2)}");
+                            Console.ReadLine();
+                            break;
                         case "3":
-                            throw new NotImplementedException("No Cow Eating Method built yet");
+                            Console.WriteLine($"{new Cow().Eat(cow3)}");
+                            Console.ReadLine();
+                            break;
                         case "4":
-                            throw new NotImplementedException("No Cow Drinking Method built yet");
+                            Console.WriteLine($"{new Cow().Drink(cow4)}");
+                            Console.ReadLine();
+                            break;
                     }
                 }
 

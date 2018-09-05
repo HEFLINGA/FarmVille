@@ -23,7 +23,7 @@ namespace FarmVilleStep4
         // Method for getting a Horse to speak!
         private string Speak(string name)
         {
-            var speak = $"You hear the horse {name} whinny and neigh in the distance";
+            var speak = $"You hear the horse {name} whinny and neigh in the distance. Press Enter to continue";
 
             return speak;
         }
@@ -31,9 +31,25 @@ namespace FarmVilleStep4
         // Method for getting a Horses Service!
         private string Service(string name)
         {
-            var service = $"{name} is a work horse! They haul stuff from place a to place b for you";
+            var service = $"{name} is a work horse! They haul stuff from place a to place b for you. Press Enter to continue";
 
             return service;
+        }
+
+        // Method for getting what a horse eats!
+        private string Eat(string name)
+        {
+            var eat = $"Your horses eat Hay!! {name} eats a little to much of it.. Press Enter to continue";
+
+            return eat;
+        }
+
+        // Method for horses drinking water
+        private string Drink(string name)
+        {
+            var drink = $"Your horse {name} is drinking some water at the trough! Press Enter to continue";
+
+            return drink;
         }
 
         public void HorseMenu(string horse1, string horse2, string horse3, string horse4)
@@ -62,11 +78,17 @@ namespace FarmVilleStep4
                             Console.ReadLine();
                             break;
                         case "2":
-                            throw new NotImplementedException("No Horse Service Method built yet");
+                            Console.WriteLine($"{new Horse().Service(horse2)}");
+                            Console.ReadLine();
+                            break;
                         case "3":
-                            throw new NotImplementedException("No Horse Eating Method built yet");
+                            Console.WriteLine($"{new Horse().Eat(horse3)}");
+                            Console.ReadLine();
+                            break;
                         case "4":
-                            throw new NotImplementedException("No Horse Drinking Method built yet");
+                            Console.WriteLine($"{new Horse().Drink(horse4)}");
+                            Console.ReadLine();
+                            break;
                     }
                 }
 
