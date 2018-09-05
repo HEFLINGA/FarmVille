@@ -11,12 +11,12 @@ namespace FarmVille
         static void Main(string[] args)
         {
             // Animals in farm - Horses, Cows, Dogs, Chickens, Sheep
-            // Methods for Horses   - Speak(), Eat(), Sleep(), Drink()                  - 
-            // Methods for Cows     - Speak(), Eat(), Sleep(), Drink(), ProduceMilk     - 
-            // Methods for Dogs     - Speak(), Sleep(), Heard(), Play()                 - Done!
-            // Methods for Chickens - Speak(), Sleep(), LayEggs(), Eat()                - 
-            // Methods for Sheep    - Speak(), Sleep(), Graze(), SheerWool()            - 
-                
+            // Methods for Horses   - Speak(), Sleep(), Eat(), Drink(), Service()       - 
+            // Methods for Cows     - Speak(), Sleep(), Eat(), Drink(), Service()       - 
+            // Methods for Dogs     - Speak(), Sleep(), Eat(), Service(), Play()        - 
+            // Methods for Chickens - Speak(), Sleep(), Eat(), Service(), Eat()         - 
+            // Methods for Sheep    - Speak(), Sleep(), Eat(), Graze(), Service()       - 
+
             // Variables for names
             var characterName = "";
             var dogName = "";
