@@ -11,11 +11,11 @@ namespace Step1Exercise5A
         static void Main(string[] args)
         {
             // Animals in farm - Horses, Cows, Dogs, Chickens, Sheep
-            // Methods for Horses   - Speak(), Sleep(), Eat(), Drink(), Service()       -
-            // Methods for Cows     - Speak(), Sleep(), Eat(), Drink(), Service()       -
-            // Methods for Dogs     - Speak(), Sleep(), Eat(), Service(), Play()        -
-            // Methods for Chickens - Speak(), Sleep(), Eat(), Service(),               - 
-            // Methods for Sheep    - Service()                                         - 
+            // Methods for Horses   - Speak(), Eat(), Drink(), Service()       -
+            // Methods for Cows     - Speak(), Eat(), Drink(), Service()       -
+            // Methods for Dogs     - Speak(), Eat(), Service(), Play()        -
+            // Methods for Chickens - Speak(), Eat(), Service(), Food()        - 
+            // Methods for Sheep    - Speak(), Eat(), Service(), Play()        - 
             var input = "";
 
             do

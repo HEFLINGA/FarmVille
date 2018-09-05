@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Step2Exercise5A
+namespace Step3Exercise5A
 {
-    public class Program
+    class Program
     {
         static void Main(string[] args)
         {
@@ -17,11 +17,35 @@ namespace Step2Exercise5A
             // Methods for Chickens - Speak(), Eat(), Service(), Food()        - 
             // Methods for Sheep    - Speak(), Eat(), Service(), Play()        - 
 
-            //Instantiate Horse class
+            // Instantiating Horses
             Horse horse1 = new Horse("Lightning");
             Horse horse2 = new Horse("Hurby");
             Horse horse3 = new Horse("Zippy");
             Horse horse4 = new Horse("Pearl");
+
+            // Instantiating Cows
+            Cow cow1 = new Cow("Rob");
+            Cow cow2 = new Cow("Birtha");
+            Cow cow3 = new Cow("Daisy");
+            Cow cow4 = new Cow("Cher");
+
+            // Instantiating Dogs
+            Dog dog1 = new Dog("Bandit");
+            Dog dog2 = new Dog("Genny");
+            Dog dog3 = new Dog("Ruby");
+            Dog dog4 = new Dog("Franks");
+
+            // Instantiating Chickens
+            Chicken chicken1 = new Chicken("Cluckyy");
+            Chicken chicken2 = new Chicken("Chicken Little");
+            Chicken chicken3 = new Chicken("Sall");
+            Chicken chicken4 = new Chicken("Rickky");
+
+            // Instantiating Sheep
+            Sheep sheep1 = new Sheep("Fran");
+            Sheep sheep2 = new Sheep("bill");
+            Sheep sheep3 = new Sheep("Hercules");
+            Sheep sheep4 = new Sheep("Paracleas");
 
             var input = "";
 
@@ -44,21 +68,28 @@ namespace Step2Exercise5A
                             Console.WriteLine("Press 'enter' to continue");
                             break;
                         case "2":
-                            throw new NotImplementedException("No Cow Class built yet");
+                            new Cow().CowMenu(cow1.name, cow2.name, cow3.name, cow4.name);
+                            Console.WriteLine("Press 'enter' to continue");
+                            break;
                         case "3":
-                            throw new NotImplementedException("No Dog Class built yet");
+                            new Dog().DogMenu(dog1.name, dog2.name, dog3.name, dog4.name);
+                            Console.WriteLine("Press 'enter' to continue");
+                            break;
                         case "4":
-                            throw new NotImplementedException("No Chicken Class built yet");
+                            new Chicken().ChickenMenu(chicken1.name, chicken2.name, chicken3.name, chicken4.name);
+                            Console.WriteLine("Press 'enter' to continue");
+                            break;
                         case "5":
-                            throw new NotImplementedException("No Sheep Class built yet");
+                            new Sheep().SheepMenu(sheep1.name, sheep2.name, sheep3.name, sheep4.name);
+                            Console.WriteLine("Press 'enter' to continue");
+                            break;
                         default:
                             Console.WriteLine("Please input a number between 1 and 5, or 'exit' to exit the program: ");
                             break;
                     }
                 }
 
-            } while (input != "exit");           
+            } while (input != "exit");
         }
     }
 }
-    
