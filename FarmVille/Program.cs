@@ -17,6 +17,15 @@ namespace FarmVilleStep4
             // Methods for Chickens - Speak(), Eat(), Service(), Food()        - 
             // Methods for Sheep    - Speak(), Eat(), Service(), Play()        - 
 
+            var name = "";
+
+            // Getting the name of dog1
+            Console.WriteLine("Hello! Before you get to the farm, you need to name your dog! Most the animals on the farm already have names.. but there is one dog here who still needs one!! Go ahead and put in the name now: ");
+            name = Console.ReadLine();
+            Console.WriteLine($"Alright! {name} is an execellent name. Anyways! lets head out. Press 'enter' to continue");
+            Console.ReadLine();
+
+            #region Farm animals Instantiation
             // Instantiating Horses
             Horse horse1 = new Horse("Lightning");
             Horse horse2 = new Horse("Hurby");
@@ -30,7 +39,7 @@ namespace FarmVilleStep4
             Cow cow4 = new Cow("Cher");
 
             // Instantiating Dogs
-            Dog dog1 = new Dog("Bandit");
+            Dog dog1 = new Dog(name);
             Dog dog2 = new Dog("Genny");
             Dog dog3 = new Dog("Ruby");
             Dog dog4 = new Dog("Franks");
@@ -46,9 +55,11 @@ namespace FarmVilleStep4
             Sheep sheep2 = new Sheep("bill");
             Sheep sheep3 = new Sheep("Hercules");
             Sheep sheep4 = new Sheep("Paracleas");
+            #endregion
 
             var input = "";
-
+            
+            // Program loop
             do
             {
                 Console.Clear();
@@ -63,6 +74,7 @@ namespace FarmVilleStep4
                 input = Console.ReadLine().ToLower();
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
 
+                // Input for menus
                 if (input != "exit")
                 {
                     switch (input)
