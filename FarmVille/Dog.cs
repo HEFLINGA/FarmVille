@@ -61,6 +61,7 @@ namespace FarmVilleStep4
             do
             {
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
                 Console.WriteLine("What would you like to do at the here with the dogs?");
                 Console.WriteLine("1. Listen to the sound a dog makes?");
                 Console.WriteLine("2. See what kind of Service a dog does?");
@@ -68,6 +69,7 @@ namespace FarmVilleStep4
                 Console.WriteLine("4. Play with your dog??");
                 Console.WriteLine("'exit' To exit to Main Menu");
                 dogInput = Console.ReadLine().ToLower();
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
 
                 if (dogInput != "exit")
                 {

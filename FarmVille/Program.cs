@@ -52,6 +52,7 @@ namespace FarmVilleStep4
             do
             {
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
                 Console.WriteLine("What would you like to do?");
                 Console.WriteLine("1. Go to the Horse corral");
                 Console.WriteLine("2. Go to the field where the Cows are");
@@ -60,6 +61,8 @@ namespace FarmVilleStep4
                 Console.WriteLine("5. Go to your Sheep barn");
                 Console.WriteLine("'exit' To exit program");
                 input = Console.ReadLine().ToLower();
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+
                 if (input != "exit")
                 {
                     switch (input)

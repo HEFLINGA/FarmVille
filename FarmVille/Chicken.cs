@@ -61,6 +61,7 @@ namespace FarmVilleStep4
             do
             {
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
                 Console.WriteLine("What would you like to do at the chicken coop?");
                 Console.WriteLine("1. Listen to the sound a chicken makes?");
                 Console.WriteLine("2. See what kind of Service a chicken does?");
@@ -68,6 +69,7 @@ namespace FarmVilleStep4
                 Console.WriteLine("4. Get food from your chicken??");
                 Console.WriteLine("'exit' To exit to Main Menu");
                 chickenInput = Console.ReadLine().ToLower();
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
 
                 if (chickenInput != "exit")
                 {

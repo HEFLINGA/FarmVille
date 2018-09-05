@@ -61,6 +61,7 @@ namespace FarmVilleStep4
             do
             {
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
                 Console.WriteLine("What would you like to do at the Cow field?");
                 Console.WriteLine("1. Listen to the sound a Cow makes?");
                 Console.WriteLine("2. See what kind of Service a Cow does?");
@@ -68,6 +69,7 @@ namespace FarmVilleStep4
                 Console.WriteLine("4. Have the Cow drink some water?");
                 Console.WriteLine("'exit' To exit to Main Menu");
                 cowInput = Console.ReadLine().ToLower();
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
 
                 if (cowInput != "exit")
                 {

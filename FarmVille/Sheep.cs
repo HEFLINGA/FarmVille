@@ -61,6 +61,7 @@ namespace FarmVilleStep4
             do
             {
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
                 Console.WriteLine("What would you like to do at the Sheep coop?");
                 Console.WriteLine("1. Listen to the sound a Sheep makes?");
                 Console.WriteLine("2. See what kind of Service a Sheep does?");
@@ -68,6 +69,7 @@ namespace FarmVilleStep4
                 Console.WriteLine("4. Watch your Sheep play??");
                 Console.WriteLine("'exit' To exit to Main Menu");
                 sheepInput = Console.ReadLine().ToLower();
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
 
                 if (sheepInput != "exit")
                 {

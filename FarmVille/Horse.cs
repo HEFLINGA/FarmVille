@@ -61,6 +61,7 @@ namespace FarmVilleStep4
             do
             {
                 Console.Clear();
+                Console.ForegroundColor = ConsoleColor.DarkCyan;
                 Console.WriteLine("What would you like to do at the horse corral?");
                 Console.WriteLine("1. Listen to the sound a horse makes?");
                 Console.WriteLine("2. See what kind of Service a horse does?");
@@ -68,6 +69,7 @@ namespace FarmVilleStep4
                 Console.WriteLine("4. Have the horse drink some water?");
                 Console.WriteLine("'exit' To exit to Main Menu");
                 horseInput = Console.ReadLine().ToLower();
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
 
                 if (horseInput != "exit")
                 {
