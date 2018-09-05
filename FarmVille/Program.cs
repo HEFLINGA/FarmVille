@@ -58,6 +58,7 @@ namespace FarmVilleStep4
                 Console.WriteLine("3. Go visit your Dogs");
                 Console.WriteLine("4. Go to the Chicken coop");
                 Console.WriteLine("5. Go to your Sheep barn");
+                Console.WriteLine("'exit' To exit program");
                 input = Console.ReadLine().ToLower();
                 if (input != "exit")
                 {

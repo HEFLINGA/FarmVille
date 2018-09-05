@@ -9,6 +9,8 @@ namespace FarmVilleStep4
     // Cow Class
     class Cow
     {
+        // Methods for Cows     - Speak(), Eat(), Drink(), Service()       -
+
         public string name;
 
         public Cow() { }

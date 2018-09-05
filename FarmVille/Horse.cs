@@ -9,6 +9,8 @@ namespace FarmVilleStep4
     // Horse class
     class Horse
     {
+        // Methods for Horses   - Speak(), Eat(), Drink(), Service()       -
+
         public string name;
 
         public Horse() { }
@@ -19,11 +21,19 @@ namespace FarmVilleStep4
         }
 
         // Method for getting a Horse to speak!
-        public string Speak(string name)
+        private string Speak(string name)
         {
             var speak = $"You hear the horse {name} whinny and neigh in the distance";
 
             return speak;
+        }
+
+        // Method for getting a Horses Service!
+        private string Service(string name)
+        {
+            var service = $"{name} is a work horse! They haul stuff from place a to place b for you";
+
+            return service;
         }
 
         public void HorseMenu(string horse1, string horse2, string horse3, string horse4)

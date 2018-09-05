@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FarmVille
+namespace FarmVilleStep4
 {
     // Sheep Class
     class Sheep
     {
+        // Methods for Sheep    - Speak(), Eat(), Service(), Play()        - 
+
         public string name;
 
         public Sheep() { }
