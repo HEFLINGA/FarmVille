@@ -62,7 +62,7 @@ namespace FarmVilleStep4
             {
                 Console.Clear();
                 Console.ForegroundColor = ConsoleColor.DarkCyan;
-                Console.WriteLine("What would you like to do at the Sheep coop?");
+                Console.WriteLine("What would you like to do at the Sheep barn?");
                 Console.WriteLine("1. Listen to the sound a Sheep makes?");
                 Console.WriteLine("2. See what kind of Service a Sheep does?");
                 Console.WriteLine("3. See what a Sheep eats?");
