@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AE81EBDB-3450-4E64-B79A-72D6073D7322}</ProjectGuid>
+    <ProjectGuid>{BE6132CC-59E7-42C7-B1AC-5A5AF42B1782}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>FarmVille</RootNamespace>
-    <AssemblyName>FarmVille</AssemblyName>
+    <RootNamespace>Step1Exercise5A</RootNamespace>
+    <AssemblyName>Step1Exercise5A</AssemblyName>
     <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,10 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Chicken.cs" />
-    <Compile Include="Cow.cs" />
-    <Compile Include="Dog.cs" />
-    <Compile Include="Horse.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
