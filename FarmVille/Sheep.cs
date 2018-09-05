@@ -21,11 +21,35 @@ namespace FarmVilleStep4
         }
 
         // Method for getting a Sheep to speak!
-        public string Speak(string name)
+        private string Speak(string name)
         {
-            var speak = $"You hear {name} running around going \"BAAHHHH\"!";
+            var speak = $"You hear {name} BAHHHing in the distance. Press Enter to continue";
 
             return speak;
+        }
+
+        // Method for getting a Sheep Service!
+        private string Service(string name)
+        {
+            var service = $"{name} is a wool producing sheep!! You get all of your nice sweaters from {name}. Press Enter to continue";
+
+            return service;
+        }
+
+        // Method for getting what a Sheep eats!
+        private string Eat(string name)
+        {
+            var eat = $"Your Sheep eat grass and hay.. You even use {name} to mow your lawn sometimes. Press Enter to continue";
+
+            return eat;
+        }
+
+        // Method for Playing with your Sheep
+        private string Play(string name)
+        {
+            var play = $"Sheep Love to play! {name} does get a little rough sometimes though, and knocks you over. Press Enter to continue";
+
+            return play;
         }
 
         public void SheepMenu(string sheep1, string sheep2, string sheep3, string sheep4)
@@ -54,11 +78,17 @@ namespace FarmVilleStep4
                             Console.ReadLine();
                             break;
                         case "2":
-                            throw new NotImplementedException("No Sheep Service Method built yet");
+                            Console.WriteLine($"{new Sheep().Service(sheep2)}");
+                            Console.ReadLine();
+                            break;
                         case "3":
-                            throw new NotImplementedException("No Sheep Eating Method built yet");
+                            Console.WriteLine($"{new Sheep().Eat(sheep3)}");
+                            Console.ReadLine();
+                            break;
                         case "4":
-                            throw new NotImplementedException("No Sheep Playing Method built yet");
+                            Console.WriteLine($"{new Sheep().Play(sheep4)}");
+                            Console.ReadLine();
+                            break;
                     }
                 }
 

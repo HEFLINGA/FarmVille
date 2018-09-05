@@ -20,12 +20,36 @@ namespace FarmVilleStep4
             this.name = name;
         }
 
-        // Method for getting a Chicken to speak!
-        public string Speak(string name)
+        // Method for getting a Chickens to speak!
+        private string Speak(string name)
         {
-            var speak = $"You hear the clucking of your chicken {name}!";
+            var speak = $"You hear {name} clucking around inside. Press Enter to continue";
 
             return speak;
+        }
+
+        // Method for getting a Chickens Service!
+        private string Service(string name)
+        {
+            var service = $"{name} is an egg laying chicken! You get all your eggs for breakfast from {name}. Press Enter to continue";
+
+            return service;
+        }
+
+        // Method for getting what a Chickens eats!
+        private string Eat(string name)
+        {
+            var eat = $"Your chickens eat Bugs and seeds! {name} Eats anything they can get there hands on. Press Enter to continue";
+
+            return eat;
+        }
+
+        // Method for getting Food from your chickens
+        private string Food(string name)
+        {
+            var food = $"You looked everywhere for {name}... You Planned to have chicken for dinner tonight, but it looks like {name} has other plans. Press Enter to continue";
+
+            return food;
         }
 
         public void ChickenMenu(string chicken1, string chicken2, string chicken3, string chicken4)
@@ -54,11 +78,17 @@ namespace FarmVilleStep4
                             Console.ReadLine();
                             break;
                         case "2":
-                            throw new NotImplementedException("No Chicken Service Method built yet");
+                            Console.WriteLine($"{new Chicken().Service(chicken2)}");
+                            Console.ReadLine();
+                            break;
                         case "3":
-                            throw new NotImplementedException("No Chicken Eating Method built yet");
+                            Console.WriteLine($"{new Chicken().Eat(chicken3)}");
+                            Console.ReadLine();
+                            break;
                         case "4":
-                            throw new NotImplementedException("No Chicken Food Method built yet");
+                            Console.WriteLine($"{new Chicken().Food(chicken4)}");
+                            Console.ReadLine();
+                            break;
                     }
                 }
 
