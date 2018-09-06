@@ -11,11 +11,11 @@ namespace FarmVilleStep4
         static void Main(string[] args)
         {
             // Animals in farm - Horses, Cows, Dogs, Chickens, Sheep
-            // Methods for Horses   - Speak(), Eat(), Drink(), Service()       -
-            // Methods for Cows     - Speak(), Eat(), Drink(), Service()       -
-            // Methods for Dogs     - Speak(), Eat(), Service(), Play()        -
-            // Methods for Chickens - Speak(), Eat(), Service(), Food()        - 
-            // Methods for Sheep    - Speak(), Eat(), Service(), Play()        - 
+            // Methods for Horses   - Speak(), Eat(), Drink(), Service()       - DONE
+            // Methods for Cows     - Speak(), Eat(), Drink(), Service()       - DONE
+            // Methods for Dogs     - Speak(), Eat(), Service(), Play()        - DONE
+            // Methods for Chickens - Speak(), Eat(), Service(), Food()        - DONE
+            // Methods for Sheep    - Speak(), Eat(), Service(), Play()        - DONE
 
             var name = "";
 
